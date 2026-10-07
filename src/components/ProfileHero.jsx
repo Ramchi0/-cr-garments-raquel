@@ -1,0 +1,25 @@
+import raquelPhoto from '../assets/CR.jpeg'
+
+const ProfileHero = ({ profile }) => {
+  return (
+    <section className="hero-layout" aria-labelledby="profile-name">
+      <div className="portrait-panel">
+        <div className="portrait-frame" aria-label="Portrait of Raquel Sainz Flores">
+          <img src={raquelPhoto} alt="Raquel Sainz Flores" className="profile-portrait" />
+        </div>
+      </div>
+
+      <div className="profile-copy">
+        <p className="eyebrow">INTERNATIONAL BUSINESS DEVELOPMENT</p>
+        <h1 id="profile-name" className="profile-name">
+          <span>Raquel</span>
+          <span>Sainz Flores</span>
+        </h1>
+        <p className="role-title">{profile.designation}</p>
+        <p className="company-line">{profile.company}</p>
+      </div>
+    </section>
+  )
+}
+
+export default ProfileHero
