@@ -6,4 +6,5 @@ export const profile = {
   mobile: '+34 636481091',
   email: 'Raquelsainz@crgarments.com',
   website: 'www.crgarments.com',
+  websiteUrl: 'https://www.crgarments.com',
 }

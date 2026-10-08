@@ -10,7 +10,12 @@ const ProfileHero = ({ profile }) => {
       </div>
 
       <div className="profile-copy">
-        <p className="eyebrow">INTERNATIONAL BUSINESS DEVELOPMENT</p>
+        <div className="hero-intro" aria-label="Company and location">
+          <p className="eyebrow">C.R. Garments</p>
+          <p className="location-badge">Spain</p>
+        </div>
+
+        <p className="eyebrow eyebrow-subtitle">INTERNATIONAL BUSINESS DEVELOPMENT</p>
         <h1 id="profile-name" className="profile-name">
           <span>Raquel</span>
           <span>Sainz Flores</span>

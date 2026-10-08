@@ -197,15 +197,42 @@ a {
   min-height: 500px;
 }
 
-.eyebrow {
+.hero-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin: 0 0 18px;
+  opacity: 0;
+  animation: fadeUp 0.42s var(--ease-quiet) 0.65s forwards;
+}
+
+.eyebrow {
+  margin: 0;
   color: var(--secondary-text);
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.eyebrow-subtitle {
+  margin: 0 0 18px;
   opacity: 0;
-  animation: fadeUp 0.42s var(--ease-quiet) 0.65s forwards;
+  animation: fadeUp 0.42s var(--ease-quiet) 0.7s forwards;
+}
+
+.location-badge {
+  margin: 0;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(100, 31, 45, 0.12);
+  background: rgba(255, 255, 255, 0.38);
+  color: var(--secondary-text);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .profile-name {
@@ -248,6 +275,43 @@ a {
   border-top: 1px solid var(--border);
   opacity: 0;
   animation: fadeUp 0.45s var(--ease-quiet) 1.2s forwards;
+}
+
+.save-contact-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 260px;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 14px 18px;
+  border: 1px solid rgba(100, 31, 45, 0.14);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(100, 31, 45, 0.06), rgba(100, 31, 45, 0.02));
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(100, 31, 45, 0.05);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.12s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+.save-contact-inline:hover,
+.save-contact-inline:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(100, 31, 45, 0.18);
+  box-shadow: 0 14px 24px rgba(100, 31, 45, 0.08);
+}
+
+.save-contact-inline:active {
+  transform: scale(0.98);
 }
 
 .contact-list {
@@ -603,10 +667,22 @@ a {
     text-align: center;
   }
 
-  .eyebrow {
+  .hero-intro {
     margin-bottom: 12px;
+  }
+
+  .eyebrow {
     font-size: 0.62rem;
     letter-spacing: 0.12em;
+  }
+
+  .location-badge {
+    padding: 5px 8px;
+    font-size: 0.55rem;
+  }
+
+  .eyebrow-subtitle {
+    margin-bottom: 12px;
   }
 
   .profile-name {
@@ -618,6 +694,12 @@ a {
     margin-top: 14px;
     font-size: 1rem;
     line-height: 1.45;
+  }
+
+  .save-contact-inline {
+    width: 100%;
+    max-width: none;
+    margin-top: 14px;
   }
 
   .company-line {
@@ -676,6 +758,11 @@ a {
 
   .profile-name {
     font-size: 42px;
+  }
+
+  .save-contact-inline {
+    letter-spacing: 0.08em;
+    font-size: 0.7rem;
   }
 
   .contact-link {

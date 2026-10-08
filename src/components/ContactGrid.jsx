@@ -1,5 +1,6 @@
-import { Globe2, Mail, MapPin, Phone } from 'lucide-react'
+import { Globe2, Mail, MapPin, Phone, UserPlus } from 'lucide-react'
 import ContactItem from './ContactItem'
+import { openVCard } from '../utils/vcard'
 
 const ContactGrid = ({ profile }) => {
   const contacts = [
@@ -19,7 +20,7 @@ const ContactGrid = ({ profile }) => {
       icon: Globe2,
       label: 'Website',
       value: profile.website,
-      href: `https://${profile.website.replace(/^https?:\/\//, '')}`,
+      href: profile.websiteUrl || `https://${profile.website.replace(/^https?:\/\//, '')}`,
       external: true,
     },
     {
@@ -29,6 +30,10 @@ const ContactGrid = ({ profile }) => {
     },
   ]
 
+  const handleSaveContact = () => {
+    openVCard(profile)
+  }
+
   return (
     <section className="contact-panel" aria-label="Contact information">
       <ul className="contact-list">
@@ -36,6 +41,11 @@ const ContactGrid = ({ profile }) => {
           <ContactItem key={contact.label} {...contact} />
         ))}
       </ul>
+
+      <button type="button" className="save-contact-inline" onClick={handleSaveContact}>
+        <UserPlus size={16} strokeWidth={2.2} aria-hidden="true" />
+        <span>Save Contact</span>
+      </button>
     </section>
   )
 }
