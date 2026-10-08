@@ -278,15 +278,14 @@ a {
 }
 
 .save-contact-inline {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   width: 100%;
   max-width: 260px;
-  margin-top: 16px;
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 48px;
+  margin: 0 auto 16px;
   padding: 14px 18px;
   border: 1px solid rgba(100, 31, 45, 0.14);
   border-radius: 999px;
@@ -699,7 +698,8 @@ a {
   .save-contact-inline {
     width: 100%;
     max-width: none;
-    margin-top: 14px;
+    min-height: 48px;
+    margin: 0 0 14px;
   }
 
   .company-line {

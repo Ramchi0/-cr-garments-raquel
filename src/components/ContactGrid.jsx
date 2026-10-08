@@ -36,16 +36,16 @@ const ContactGrid = ({ profile }) => {
 
   return (
     <section className="contact-panel" aria-label="Contact information">
+      <button type="button" className="save-contact-inline" onClick={handleSaveContact}>
+        <UserPlus size={16} strokeWidth={2.2} aria-hidden="true" />
+        <span>Save Contact</span>
+      </button>
+
       <ul className="contact-list">
         {contacts.map((contact) => (
           <ContactItem key={contact.label} {...contact} />
         ))}
       </ul>
-
-      <button type="button" className="save-contact-inline" onClick={handleSaveContact}>
-        <UserPlus size={16} strokeWidth={2.2} aria-hidden="true" />
-        <span>Save Contact</span>
-      </button>
     </section>
   )
 }
