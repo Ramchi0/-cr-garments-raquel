@@ -12,10 +12,10 @@ const ProfileHero = ({ profile }) => {
       <div className="profile-copy">
         <div className="hero-intro" aria-label="Company and location">
           <p className="eyebrow">C.R. Garments</p>
-          <p className="location-badge">Spain</p>
+          <p className="location-badge">{profile.location}</p>
         </div>
 
-        <p className="eyebrow eyebrow-subtitle">INTERNATIONAL BUSINESS DEVELOPMENT</p>
+        <p className="eyebrow eyebrow-subtitle">DESARROLLO DE NEGOCIO INTERNACIONAL</p>
         <h1 id="profile-name" className="profile-name">
           <span>Raquel</span>
           <span>Sainz Flores</span>
