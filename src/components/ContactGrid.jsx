@@ -99,12 +99,6 @@ const ContactGrid = ({ profile }) => {
         <UserPlus size={16} strokeWidth={2.2} aria-hidden="true" />
         <span>Save Contact</span>
       </button>
-      {isIOSDevice() ? (
-        <p className="ios-contact-guidance">
-          En la vista previa, elige Create New Contact o Add to Existing Contact. Completa el
-          formulario de contactos y pulsa Done para guardar.
-        </p>
-      ) : null}
       {saveError ? (
         <p className="contact-save-error" role="alert">
           {saveError}
